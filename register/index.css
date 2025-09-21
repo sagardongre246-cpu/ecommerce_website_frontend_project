@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #f1f4f9, #dff1ff);
+  min-height: 100vh;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  padding: 20px 50px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #0b3d3c;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  transition: 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #99acab;
+  /* font-weight: 600; */
+}
+
+/* Registration Section */
+.register-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.register-container {
+  background: rgba(255,255,255,0.8);
+  backdrop-filter: blur(10px);
+  padding: 40px;
+  border-radius: 15px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  animation: slideIn 1s ease;
+}
+
+@keyframes slideIn {
+  from {transform: translateY(40px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
+}
+
+.register-container h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #0b3d3c;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 10px 5px;
+  border: none;
+  border-bottom: 2px solid #aaa;
+  background: transparent;
+  outline: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group label {
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  color: #666;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+.input-group input:focus,
+.input-group input:valid {
+  border-color: #0b3d3c;
+}
+
+.input-group input:focus ~ label,
+.input-group input:valid ~ label {
+  top: -10px;
+  font-size: 13px;
+  color: #0b3d3c;
+}
+
+.btn {
+  width: 100%;
+  padding: 12px;
+  background: #0b3d3c;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #145f5e;
+}
+
+.success-message {
+  text-align: center;
+  margin-top: 15px;
+  color: green;
+  font-weight: 600;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
